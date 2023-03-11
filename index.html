@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>HCF AND LCM CALCULATOR</title>
+        <style>
+            body {
+                text-align: center;
+                padding: 100px ;
+            }
+        </style>
+    </head>
+    <script>
+        function solve(){
+        var num1=document.getElementById("number1").value;
+        var num2=document.getElementById("number2").value;
+        var ansH,ansL;
+        while(true){
+            var q1=num1%num2;
+            if(q1==0){
+                ansH=num2;
+                ansL=num1*num2/ansH;
+                break;
+            }
+            else{
+                num1=num2;
+                num2=num1/num2;
+            }
+        }
+        document.getElementById("intro").innerHTML="The given inputs are "+num1+ " and "+num2;
+        document.getElementById("answerH").innerHTML="HCF : "+ansH;
+        document.getElementById("answerL").innerHTML="LCM : "+ansL;
+        }
+    </script>
+    <body>
+        <h1>HCF AND LCM CALCULATOR</h1>
+            <label for="number1">Enter the number: </label>
+            <input type="number" id="number1" name="numbers"><br>
+            <label for="number2">Enter the number: </label>
+            <input type="number" id="number2" name="numbers"><br><br>
+            <button onclick="solve()" id="button">Calculate</button><br>
+            <p id="intro"></p>
+            <p id="answerH"></p>
+            <p id="answerL"></p>
+    </body>
+</html>
