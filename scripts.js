@@ -26,7 +26,7 @@ function calculate(a,b){
     return calculate(b,a%b);
 }
 function print(num1,num2,ansH,ansL){
-    document.getElementById("intro").innerHTML="The given inputs are "+num1+ " and "+num2;
+    document.getElementById("intro").innerHTML="The given inputs are "+num1+ " and "+num2+".";
     document.getElementById("answerH").innerHTML="HCF : "+ansH;
     document.getElementById("answerL").innerHTML="LCM : "+ansL;
 }
