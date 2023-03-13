@@ -16,17 +16,14 @@ function solve()
     else{
         ansH=calculate(num2,num1);
     }
-    console.log(num1,num2,ansH,ansL);
     ansL=num1*num2/ansH;
     print(num1,num2,ansH,ansL);
-    console.log(num1,num2,ansH,ansL);
     return;
 }
 function calculate(a,b){
-    console.log(a,b);
     if(b==0)
         return a;
-    calculate(b,a%b);
+    return calculate(b,a%b);
 }
 function print(num1,num2,ansH,ansL){
     document.getElementById("intro").innerHTML="The given inputs are "+num1+ " and "+num2;
