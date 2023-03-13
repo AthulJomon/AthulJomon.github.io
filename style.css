@@ -5,6 +5,8 @@ input::-webkit-inner-spin-button {
 }
 
 body {
-    text-align: center;
-    padding: 100px ;
+  font-family: 'Helvetica', sans-serif;
+  background-color: rgb(243, 243, 243);
+  text-align: center;
+  padding: 100px ;
 }
